@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="layouts/layout :: head"></head>
+</head>
+<body>
+<header th:replace="layouts/layout::header"></header>
+	<div class="container">
+<main role="main" class="inner cover">
+        <h1 class="cover-heading">APPointment</h1>
+        <p class="lead">Sistema de control de citas, doctores y pacientes. </p>
+        <p class="lead">
+          <a href="#" class="btn btn-lg btn-secondary">Conocenos mejor</a>
+        </p>
+      </main>
+
+
+
+<div class="row">
+          <div class="col-lg-4">
+            <img class="rounded-circle" th:src="@{/img/pacientes.png}" alt="Generic placeholder image" width="140" height="140">
+            <h2>Pacientes</h2>
+            <p>Registre y vea los pacientes de nuestra clinica</p>
+            <p><a class="btn btn-secondary" th:href="@{/pacientes}" role="button">Entrar »</a></p>
+          </div><!-- /.col-lg-4 -->
+          <div class="col-lg-4">
+            <img class="rounded-circle" th:src="@{/img/doctores.png}" alt="Generic placeholder image" width="140" height="140">
+            <h2>Doctores</h2>
+            <p>Registre y vea los doctores de nuestra clinica</p>
+            <p><a class="btn btn-secondary" th:href="@{/doctores}" role="button">Entrar »</a></p>
+          </div><!-- /.col-lg-4 -->
+          <div class="col-lg-4">
+            <img class="rounded-circle" th:src="@{/img/consultas.png}" alt="Generic placeholder image" width="140" height="140">
+            <h2>Consultas</h2>
+            <p>Gestione todas las consultas de la clinica en un solo lugar </p>
+            <p><a class="btn btn-secondary" th:href="@{/consultas.html}" role="button">Entrar »</a></p>
+          </div><!-- /.col-lg-4 -->
+        </div>
+
+
+
+
+
+<footer th:replace="layouts/layout::footer"></footer>
+</body>
+</html>
