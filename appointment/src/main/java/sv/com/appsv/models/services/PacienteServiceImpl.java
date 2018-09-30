@@ -1,42 +1,43 @@
 package sv.com.appsv.models.services;
 
-import java.util.List;
+
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+
+import java.util.List; 
 
 import sv.com.appsv.models.dao.IPacienteDAO;
 import sv.com.appsv.models.entities.Paciente;
 
-
-@Component("pacienteService")
-public class PacienteServiceImpl implements IPacienteService {
-
+@Service
+public class PacienteServiceImpl implements IPacienteService{
 	@Autowired
-	private IPacienteDAO pacienteDao;
-
+	private IPacienteDAO pacienteDAO;
+	
 	@Override
 	@Transactional(readOnly=true)
 	public List<Paciente> findAll() {
-		return (List<Paciente>)pacienteDao.findAll();
+		return (List<Paciente>) pacienteDAO.findAll();
 	}
-
+	
 	@Override
-	@Transactional()
-	public void save(Paciente paciente) {
-		pacienteDao.save(paciente);		
-	}
-
-	@Override
-	@Transactional(readOnly=true)	
+	@Transactional(readOnly=true)
 	public Paciente findOne(Long id) {
-		return pacienteDao.findById(id).orElse(null);
+		return pacienteDAO.findById(id).orElse(null);
 	}
-
+	
 	@Override
-	@Transactional()
-	public void delete(Long id) {
-		pacienteDao.deleteById(id);		
+	@Transactional
+	public void save (Paciente paciente) {
+		pacienteDAO.save(paciente);
 	}
+	
+	@Override
+	@Transactional
+	public void delete(Long id) {
+		pacienteDAO.deleteById(id);
+	}
+	
 }

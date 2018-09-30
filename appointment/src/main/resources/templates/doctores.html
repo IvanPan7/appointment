@@ -9,21 +9,21 @@
  <thead>
   <tr>
      <th scope="col">id</th>
-     <th scope="col">Descripcion</th>
-     <th scope="col">Cliente</th>     
-     <th scope="col">Total</th>
+     <th scope="col">Nombres</th>
+     <th scope="col">Apellidos</th>     
+     <th scope="col">Edad</th>
   </tr>
  </thead>
  <tbody>
  
-  <tr th:each="product: ${products}">     
-     <td th:text="${product.id}"/>
-     <td th:text="${product.name}" />
-     <td th:text="${product.price}" />     
-     <td th:text="${product.createAt}" />
-     <td> <a th:href="@{/product/} + ${product.id}" th:text="'Editar'" 
+  <tr th:each="doctor: ${doctors}">     
+     <td th:text="${doctor.id}"/>
+     <td th:text="${doctor.nombres}" />
+     <td th:text="${doctor.apellidos}" />     
+     <td th:text="${doctor.edad}" />
+     <td> <a th:href="@{/doctor/} + ${doctor.id}" th:text="'Editar'" 
              class="btn btn-primary btn-xs" ></a></td>
-     <td> <a th:href="@{/remove/} + ${product.id}" th:text="'Eliminar'" 
+     <td> <a th:href="@{/eliminar/} + ${doctor.id}" th:text="'Eliminar'" 
              class="btn btn-danger btn-xs" 
              onclick="return confirm('Estas seguro?')" ></a></td>
   </tr>
@@ -31,7 +31,7 @@
 </table>
 </div>
 
-<a th:href="@{/product}" class="btn btn-primary">Crear Producto</a>
+<a th:href="@{/doctor}" class="btn btn-primary">Crear doctor</a>
 <a th:href="@{/}" class="btn btn-secondary">Regresar</a>
 <footer th:replace="layouts/layout::footer"></footer>
 </body>
