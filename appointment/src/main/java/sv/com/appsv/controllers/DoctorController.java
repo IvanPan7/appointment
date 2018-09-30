@@ -59,7 +59,7 @@ public class DoctorController {
 			flash.addFlashAttribute("error", "El id del doctor no puede ser menor a cero");
 			return "redirect:/doctor";
 		}
-		model.put("doctor ", doctor);
+		model.put("doctor", doctor);
 		model.put("titulo", "Editar Doctor");
 		return "doctor";		
 	}

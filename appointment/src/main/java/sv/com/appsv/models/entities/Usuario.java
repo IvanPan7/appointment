@@ -21,6 +21,8 @@ public class Usuario {
 	private String pass;
 
 
+	//Getters and Setters
+	
 	public Long getId() {
 		return id;
 	}
@@ -49,7 +51,4 @@ public class Usuario {
 	public void setPass(String pass) {
 		this.pass = pass;
 	}
-	
-	
-	
 }

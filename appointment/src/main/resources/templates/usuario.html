@@ -8,12 +8,12 @@
 	
 	<form th:action="@{/usuario}" th:object="${usuario}" method="post" >
 	<div class="form-group">
-    	<label for="nombres">Usuario</label>
+    	<label for="user">Usuario</label>
     	<input type="text" class="form-control" id="user" placeholder="Usuario" th:field="*{user}"/>
     	<small th:if="${#fields.hasErrors('user')}" th:errors="*{user}" class="form-text text-danger"></small>
   	</div>
 	<div class="form-group">
-    	<label for="apellidos">Clave</label>
+    	<label for="pass">Clave</label>
     	<input type="password" class="form-control" id="pass" placeholder="***************" th:field="*{pass}"/>
     	<small th:if="${#fields.hasErrors('pass')}" th:errors="*{pass}" class="form-text text-danger"></small>
   	</div>
@@ -21,7 +21,7 @@
   	
   	
   	
-	  	<input type="submit" value="Crear Usuario"  class="btn btn-primary"/>
+	  	<a th:href="@{/}" class="btn btn-secondary">Guardar</a>
 	  	<a th:href="@{/}" class="btn btn-secondary">Cancelar</a>  	
 		<input type="hidden" id="id" th:field="*{id}">
 	</form>
