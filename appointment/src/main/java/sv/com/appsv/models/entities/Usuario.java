@@ -1,6 +1,5 @@
 package sv.com.appsv.models.entities;
 
-
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -8,56 +7,49 @@ import javax.persistence.Id;
 import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
 
-
 @Entity
-@Table(name="pacientes")
-public class Paciente{
-
+@Table(name="usuarios")
+public class Usuario {
 	@Id
 	@GeneratedValue(strategy=GenerationType.SEQUENCE, generator = "paciente_Seq")
 	@SequenceGenerator(name = "paciente_Seq", sequenceName = "PACIENTE_SEQ")
 	private Long id;
+	
+	private String user;
+	
+	
+	private String pass;
 
-	
-	private String nombres;
-	
-	
-	private String apellidos;
-	
-	
-	private Long edad;
 
-	//Getters y Setters
 	public Long getId() {
 		return id;
 	}
+
 
 	public void setId(Long id) {
 		this.id = id;
 	}
 
-	public String getNombres() {
-		return nombres;
+
+	public String getUser() {
+		return user;
 	}
 
-	public void setNombres(String nombres) {
-		this.nombres = nombres;
+
+	public void setUser(String user) {
+		this.user = user;
 	}
 
-	public String getApellidos() {
-		return apellidos;
+
+	public String getPass() {
+		return pass;
 	}
 
-	public void setApellidos(String apellidos) {
-		this.apellidos = apellidos;
-	}
 
-	public Long getEdad() {
-		return edad;
+	public void setPass(String pass) {
+		this.pass = pass;
 	}
-
-	public void setEdad(Long edad) {
-		this.edad = edad;
-	}
+	
+	
 	
 }

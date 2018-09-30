@@ -6,13 +6,10 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
 @Controller
-@RequestMapping("/")
-public class RootController {
-	
-	@RequestMapping(method= RequestMethod.GET)
-	public String index(Model model) {
-		model.addAttribute("title","Sistema de Gestión de Pacientes");
-		return "login";
+public class IndexController {
+	@RequestMapping(value="/index", method=RequestMethod.GET)
+	public String listarPacientes(Model model) {
+		model.addAttribute("titulo","Listado de Pacientes");
+		return "index";
 	}
-
 }

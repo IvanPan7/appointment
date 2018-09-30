@@ -1,10 +1,30 @@
 <!DOCTYPE html>
-<html>
-<head>
-<meta charset="ISO-8859-1">
-<title>Insert title here</title>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="layouts/layout :: head">
+<meta charset="utf-8"/>
 </head>
 <body>
+<header th:replace="layouts/layout::header"></header>
+	<div class="container">
+<main role="main" class="inner cover">
+        <center><h1>LOGIN PARA INCICIO DE SESIÓN</h1>
+        <form >
+        <img class="rounded-circle" th:src="@{/img/login.png}" alt="Generic placeholder image" width="140" height="140"></center>
+        <input type="text" class="form-control" id="user" placeholder="Usuario / E-mail" />
+        <input type="password" class="form-control" id="pass" placeholder="***************" />
+        <center><p><a class="btn btn-danger" th:href="@{/index}" role="button">Entrar »</a></p></center>
+        <center><p><a class="btn btn-warning" th:href="@{/}" role="button">Cancelar»</a></p></center>
+        <center><p><a class="btn btn-alert" th:href="@{/usuario}" role="button">¿Aún no estás registrado? Click aquí</a></p></center>
+        </form>
+      </main>
 
+
+
+
+
+
+
+
+<footer th:replace="layouts/layout::footer"></footer>
 </body>
 </html>

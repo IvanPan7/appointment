@@ -6,30 +6,26 @@
 <header th:replace="layouts/layout::header"></header>
 <div class="container">
 	
-	<form th:action="@{/product}" th:object="${product}" method="post" >
+	<form th:action="@{/usuario}" th:object="${usuario}" method="post" >
 	<div class="form-group">
-    	<label for="name">Nombre</label>
-    	<input type="text" class="form-control" id="name" placeholder="Nombre" th:field="*{name}"/>
-    	<small th:if="${#fields.hasErrors('name')}" th:errors="*{name}" class="form-text text-danger"></small>
+    	<label for="nombres">Usuario</label>
+    	<input type="text" class="form-control" id="user" placeholder="Usuario" th:field="*{user}"/>
+    	<small th:if="${#fields.hasErrors('user')}" th:errors="*{user}" class="form-text text-danger"></small>
   	</div>
 	<div class="form-group">
-    	<label for="price">Precio</label>
-    	<input type="text" class="form-control" id="price" placeholder="Precio" th:field="*{price}"/>
-    	<small th:if="${#fields.hasErrors('price')}" th:errors="*{price}" class="form-text text-danger"></small>
+    	<label for="apellidos">Clave</label>
+    	<input type="password" class="form-control" id="pass" placeholder="***************" th:field="*{pass}"/>
+    	<small th:if="${#fields.hasErrors('pass')}" th:errors="*{pass}" class="form-text text-danger"></small>
   	</div>
 	
-  	<div class="form-group">
-    	<label for="createAt">Fecha</label>
-    	<input type="text" class="form-control" id="createAt" placeholder="Fecha" th:field="*{createAt}"/>
-    	<small th:if="${#fields.hasErrors('createAt')}" th:errors="*{createAt}" class="form-text text-danger"></small>
-  	</div>
   	
   	
-  	<input type="submit" value="Crear Producto"  class="btn btn-primary"/>
-  	<a th:href="@{/products}" class="btn btn-secondary">Regresar</a>  	
-	<input type="hidden" id="id" th:field="*{id}">
-</form>
-	
+  	
+	  	<input type="submit" value="Crear Usuario"  class="btn btn-primary"/>
+	  	<a th:href="@{/}" class="btn btn-secondary">Cancelar</a>  	
+		<input type="hidden" id="id" th:field="*{id}">
+	</form>
+</div>
 	
 <footer th:replace="layouts/layout::footer"></footer>
 </body>

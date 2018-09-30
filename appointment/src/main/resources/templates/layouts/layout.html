@@ -7,7 +7,7 @@
 <meta name="description" content="" />
 <meta name="author" content="APP-SV" />
 <title th:text="${title}"></title>
-<link rel="icon" th:href="@{/img/diente.png}">
+<link rel="icon" th:href="@{/img/favicon.ico}">
 <link rel="stylesheet" th:href="@{/css/bootstrap.min.css}" />
 <link rel="stylesheet" th:href="@{/css/dashboard.css}">
 <link rel="stylesheet" th:href="@{/css/custom.css}">
@@ -33,15 +33,14 @@
 	<!-- fragmento reutilizable para footer -->
 	<footer th:fragment="footer" class="container">
 
-		<div class="footer">
-			<p>Clínica Dental Odontocosmetic.</p>
-			<p>Atención dental especializada.</p>
+		<div class="footer" style="background-color:light-blue; width=100%">
+<marquee>			<center><h6 style="color:">Code by: APP-SV - Clínica Dental Odontocosmetic</h6></center>
+			<center><h6 style="color:">2018 -  Todos los derechos reservados</h6></center> </marquee>
 		</div>
 
 		<script th:src="@{/js/bootstrap.min.js}"></script>
 		<script th:src="@{/js/jquery-3.3.1.min.js}"></script>
 	</footer>
 	<!-- fin fragmento reutilizable para footer -->
-
 </body>
 </html>

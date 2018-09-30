@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="layouts/layout :: head"></head>
+</head>
+<body>
+<header th:replace="layouts/layout::header"></header>
+	<div class="container">
+
+<center><main role="main" class="inner cover">
+        <h1 class="cover-heading">APPointment</h1>
+        <p class="lead">Sistema de control de citas, doctores y pacientes. </p>
+        <p class="lead">
+          
+        </p>
+      </main>
+
+
+
+
+          
+            <img style="text-align:center;" class="rounded-circle" th:src="@{/img/clinica.jpg}" alt="Generic placeholder image" width="300" height="300"/>
+            <img style="text-align:center;" class="rounded-circle" th:src="@{/img/clinica3.jpg}" alt="Generic placeholder image" width="400" height="400"/>
+            <img style="text-align:center;" class="rounded-circle" th:src="@{/img/clinica2.jpg}" alt="Generic placeholder image" width="300" height="300"/>
+            
+<div witdh=100%>
+<a style="float:left" th:href="@{/index/}" class="btn btn-lg btn-secondary"> << Regresar </a> </div>
+</center>
+
+
+
+<footer th:replace="layouts/layout::footer"></footer>
+</body>
+</html>

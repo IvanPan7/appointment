@@ -25,7 +25,7 @@ public class Doctor{
 	private String apellidos;
 	
 	
-	private Double edad;
+	private Long edad;
 
 	//Getters y Setters
 	
@@ -59,12 +59,12 @@ public class Doctor{
 	}
 
 
-	public Double getEdad() {
+	public Long getEdad() {
 		return edad;
 	}
 
 
-	public void setEdad(Double edad) {
+	public void setEdad(Long edad) {
 		this.edad = edad;
 	}
 
