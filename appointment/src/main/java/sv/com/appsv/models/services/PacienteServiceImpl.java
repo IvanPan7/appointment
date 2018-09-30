@@ -1,11 +1,8 @@
 package sv.com.appsv.models.services;
 
-
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-
 import java.util.List; 
 
 import sv.com.appsv.models.dao.IPacienteDAO;
@@ -30,7 +27,7 @@ public class PacienteServiceImpl implements IPacienteService{
 	
 	@Override
 	@Transactional
-	public void save (Paciente paciente) {
+	public void save(Paciente paciente) {
 		pacienteDAO.save(paciente);
 	}
 	

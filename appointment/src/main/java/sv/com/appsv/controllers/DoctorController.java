@@ -1,9 +1,7 @@
 package sv.com.appsv.controllers;
 
 import java.util.Map;
-
 import javax.validation.Valid;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -26,7 +24,7 @@ public class DoctorController {
 	
 	@RequestMapping(value="/doctores", method=RequestMethod.GET)
 	public String listarDoctores(Model model) {
-		model.addAttribute("titulo","Listado de Doctors");
+		model.addAttribute("titulo","Listado de Doctores");
 		model.addAttribute("doctores", doctorService.findAll());
 		return "doctores";
 	}
@@ -40,7 +38,7 @@ public class DoctorController {
 	}
 	
 	@RequestMapping(value="/doctor", method=RequestMethod.POST)
-	public String guardar(@Valid Doctor doctor, BindingResult bindingResult, RedirectAttributes flash, SessionStatus sessionStatus) {
+	public String guardarDoctor(@Valid Doctor doctor, BindingResult bindingResult, RedirectAttributes flash, SessionStatus sessionStatus) {
 		if(bindingResult.hasErrors()) {
 			return "doctor";
 		}
@@ -52,7 +50,7 @@ public class DoctorController {
 	}
 	
 	@RequestMapping(value="/doctor/{id}")
-	public String editar(@PathVariable(value="id") Long id, Map<String, Object> model, RedirectAttributes flash){
+	public String editarDoctor(@PathVariable(value="id") Long id, Map<String, Object> model, RedirectAttributes flash){
 		Doctor doctor = null;
 		if(id>0) {
 			doctor = doctorService.findOne(id);
@@ -65,8 +63,8 @@ public class DoctorController {
 		return "doctor";		
 	}
 	
-	@RequestMapping(value="/eliminar/{id}")
-	public String eliminar(@PathVariable(value="id")Long id, RedirectAttributes flash) {
+	@RequestMapping(value="/eliminardoctor/{id}")
+	public String eliminarDoctor(@PathVariable(value="id")Long id, RedirectAttributes flash) {
 		if(id>0) {
 			doctorService.delete(id);
 		}

@@ -3,12 +3,10 @@ package sv.com.appsv.models.services;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-
 import java.util.List; 
 
 
 import sv.com.appsv.models.dao.IDoctorDAO;
-
 import sv.com.appsv.models.entities.Doctor;
 
 

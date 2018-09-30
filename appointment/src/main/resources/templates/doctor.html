@@ -24,7 +24,6 @@
     	<small th:if="${#fields.hasErrors('edad')}" th:errors="*{edad}" class="form-text text-danger"></small>
   	</div>
   	
-  	
 	  	<input type="submit" value="Crear Doctor"  class="btn btn-primary"/>
 	  	<a th:href="@{/doctores}" class="btn btn-secondary">Regresar</a>  	
 		<input type="hidden" id="id" th:field="*{id}">

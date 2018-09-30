@@ -9,6 +9,7 @@
  <thead>
   <tr>
      <th scope="col">id</th>
+     <th scope="col"/>
      <th scope="col">Nombres</th>
      <th scope="col">Apellidos</th>     
      <th scope="col">Edad</th>
@@ -16,7 +17,8 @@
  </thead>
  <tbody>
  
-  <tr th:each="doctor: ${doctors}">     
+  <tr th:each="doctor: ${doctors}">
+  <td th:text="Dr." />     
      <td th:text="${doctor.id}"/>
      <td th:text="${doctor.nombres}" />
      <td th:text="${doctor.apellidos}" />     

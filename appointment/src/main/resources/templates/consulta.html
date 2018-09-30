@@ -6,30 +6,30 @@
 <header th:replace="layouts/layout::header"></header>
 <div class="container">
 	
-	<form th:action="@{/product}" th:object="${product}" method="post" >
+	<form th:action="@{/consulta}" th:object="${consulta}" method="post" >
 	<div class="form-group">
-    	<label for="name">Nombre</label>
-    	<input type="text" class="form-control" id="name" placeholder="Nombre" th:field="*{name}"/>
-    	<small th:if="${#fields.hasErrors('name')}" th:errors="*{name}" class="form-text text-danger"></small>
+    	<label for="name">Fecha de Cita</label>
+    	<input type="date"  class="form-control" id="dateAppointment" placeholder="2018-12-31" th:field="*{dateAppointment}"/>
+    	<small th:if="${#fields.hasErrors('dateAppointment')}" th:errors="*{dateAppointment}" class="form-text text-danger"></small>
   	</div>
 	<div class="form-group">
-    	<label for="price">Precio</label>
-    	<input type="text" class="form-control" id="price" placeholder="Precio" th:field="*{price}"/>
-    	<small th:if="${#fields.hasErrors('price')}" th:errors="*{price}" class="form-text text-danger"></small>
+    	<label for="paciente_name">Nombre del Paciente</label>
+    	<input type="text" class="form-control" id="paciente_name" placeholder="Juan" th:field="*{paciente_name}"/>
+    	<small th:if="${#fields.hasErrors('paciente_name')}" th:errors="*{paciente_name}" class="form-text text-danger"></small>
   	</div>
 	
   	<div class="form-group">
-    	<label for="createAt">Fecha</label>
-    	<input type="text" class="form-control" id="createAt" placeholder="Fecha" th:field="*{createAt}"/>
-    	<small th:if="${#fields.hasErrors('createAt')}" th:errors="*{createAt}" class="form-text text-danger"></small>
+    	<label for="doctor_name">Nombre del Doctor</label>
+    	<input type="text" class="form-control" id="doctor_name" placeholder="Perez" th:field="*{doctor_name}"/>
+    	<small th:if="${#fields.hasErrors('doctor_name')}" th:errors="*{doctor_name}" class="form-text text-danger"></small>
   	</div>
   	
   	
-  	<input type="submit" value="Crear Producto"  class="btn btn-primary"/>
-  	<a th:href="@{/products}" class="btn btn-secondary">Regresar</a>  	
-	<input type="hidden" id="id" th:field="*{id}">
+  	<input type="submit" value="Crear Consulta"  class="btn btn-primary"/>
+  	<a th:href="@{/consultas}" class="btn btn-secondary">Regresar</a>  	
+	<input type="hidden" id="id" th:field="*{id}" />
 </form>
-	
+</div>	
 	
 <footer th:replace="layouts/layout::footer"></footer>
 </body>
