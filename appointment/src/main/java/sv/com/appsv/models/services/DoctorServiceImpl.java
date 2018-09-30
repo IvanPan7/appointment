@@ -13,7 +13,7 @@ import sv.com.appsv.models.entities.Doctor;
 @Service
 public class DoctorServiceImpl implements IDoctorService {
 	@Autowired
-private IDoctorDAO doctorDAO;
+	private IDoctorDAO doctorDAO;
 	
 	@Override
 	@Transactional(readOnly=true)
@@ -29,7 +29,7 @@ private IDoctorDAO doctorDAO;
 	
 	@Override
 	@Transactional
-	public void save (Doctor doctor) {
+	public void save(Doctor doctor) {
 		doctorDAO.save(doctor);
 	}
 	

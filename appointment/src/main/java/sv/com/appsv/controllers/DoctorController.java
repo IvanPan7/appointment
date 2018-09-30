@@ -16,6 +16,7 @@ import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 import sv.com.appsv.models.entities.Doctor;
 import sv.com.appsv.models.services.IDoctorService;
 
+
 @Controller
 @SessionAttributes("doctor")
 public class DoctorController {
@@ -31,7 +32,7 @@ public class DoctorController {
 	
 	@RequestMapping(value="/doctor")
 	public String crearDoctor(Map<String, Object> model) {
-		Doctor doctor = new Doctor();
+		Doctor doctor= new Doctor();
 		model.put("doctor", doctor);
 		model.put("titulo", "Ingresando un Doctor");
 		return "doctor";		
@@ -55,10 +56,10 @@ public class DoctorController {
 		if(id>0) {
 			doctor = doctorService.findOne(id);
 		}else {
-			flash.addFlashAttribute("error", "El id del cliente no puede ser menor a cero");
-			return "retirect:/doctor";
+			flash.addFlashAttribute("error", "El id del doctor no puede ser menor a cero");
+			return "redirect:/doctor";
 		}
-		model.put("doctor", doctor);
+		model.put("doctor ", doctor);
 		model.put("titulo", "Editar Doctor");
 		return "doctor";		
 	}

@@ -9,7 +9,7 @@
  <thead>
   <tr>
      <th scope="col">id</th>
-     <th scope="col"/>
+     <th scope="col">Cargo</th>
      <th scope="col">Nombres</th>
      <th scope="col">Apellidos</th>     
      <th scope="col">Edad</th>
@@ -17,15 +17,16 @@
  </thead>
  <tbody>
  
-  <tr th:each="doctor: ${doctors}">
-  <td th:text="Dr." />     
-     <td th:text="${doctor.id}"/>
-     <td th:text="${doctor.nombres}" />
-     <td th:text="${doctor.apellidos}" />     
-     <td th:text="${doctor.edad}" />
-     <td> <a th:href="@{/doctor/} + ${doctor.id}" th:text="'Editar'" 
+  <tr th:each="doctor: ${doctores}">
+  	<td th:text="${doctor.id}"/>
+  	<td th:text="Dr." />     
+     
+    <td th:text="${doctor.nombres}" />
+    <td th:text="${doctor.apellidos}" />     
+    <td th:text="${doctor.edad}" />
+    <td> <a th:href="@{/doctor/} + ${doctor.id}" th:text="'Editar'" 
              class="btn btn-primary btn-xs" ></a></td>
-     <td> <a th:href="@{/eliminar/} + ${doctor.id}" th:text="'Eliminar'" 
+     <td> <a th:href="@{/eliminardoctor/} + ${doctor.id}" th:text="'Eliminar'" 
              class="btn btn-danger btn-xs" 
              onclick="return confirm('Estas seguro?')" ></a></td>
   </tr>
